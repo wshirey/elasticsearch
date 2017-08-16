@@ -200,7 +200,7 @@ GET index/_search
 
 In that case we rounded to the minute, so if the current time is `16:31:29`,
 the range query will match everything whose value of the `my_date` field is
-between `15:31:00` and `16:31:59`. And if several users run a query that
+between `16:31:00` and `16:31:59`. And if several users run a query that
 contains this range in the same minute, the query cache could help speed things
 up a bit. The longer the interval that is used for rounding, the more the query
 cache can help, but beware that too aggressive rounding might also hurt user
